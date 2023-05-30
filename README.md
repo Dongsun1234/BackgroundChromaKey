@@ -60,4 +60,6 @@ key = cv.waitKey(25)
 if key == 27:  # esc 누르면 종료
     break
 ```
+![blackface](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/e63ed18a-6b57-4cad-9bc6-0c21282f28d8)
+![blackface_inv](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/f3d8f853-89a2-466f-af28-b072381d732e)
 
