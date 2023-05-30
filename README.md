@@ -14,7 +14,7 @@ key = cv.waitKey(25)
 
 ![mask_brown](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/11238559-f262-4884-8ccb-e542d7165fe7)
 
-# 하지만 몸 영역 외의 다른 배경에서도 같이 검출이 되는 것을 볼 수 있었다. 그리고 머리카락 영역에서도 완전히 검출되지 않았다.
+### 하지만 몸 영역 외의 다른 배경에서도 같이 검출이 되는 것을 볼 수 있었다. 그리고 머리카락 영역에서도 완전히 검출되지 않았다.
 
 ```python
 brown_lo = np.array([39, 0, 50])  
@@ -35,4 +35,29 @@ if key == 27:  # esc 누르면 종료
 ```
 
 
-![mask_mor_inv.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e7f9bb0-68b9-4670-954f-9feaedc1ab2e/mask_mor_inv.jpg)
+![mask_brown](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/9012f511-6a27-48fd-85ed-177a104b52ab)
+![mask_mor_inv](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/b9f11133-e2bb-46d2-95c9-b34200bc8f16)
+
+### 모폴로지를 통해  커널 크기 만큼 1이 있지 않으면 0으로 처리하여 이미지 필터를 적용하였다.
+
+```python
+retval, frame = cap.read()
+
+if not retval:
+    break
+gray_frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+ret, frame_threshold = cv.threshold(gray_frame, 70, 255, cv.THRESH_BINARY)
+# 머리카락 검정 배경 흰색
+if not ret:
+    break
+#머리카락 영역이 제대로 잡히지 않아 프레임을 이진화하여 해당 머리카락을 추출하게 하였다.
+
+blackface = cv.bitwise_and(frame_threshold, output_mor_inv)  # 얼굴 검 배경 흰
+blackface_inv = cv.bitwise_not(blackface)  # 얼굴이 흰색 배경 
+
+cv.imshow("result", blackface) #blackface_inv
+key = cv.waitKey(25)
+if key == 27:  # esc 누르면 종료
+    break
+```
+
