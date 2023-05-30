@@ -76,8 +76,7 @@ if key == 27:  # esc 누르면 종료
     break
 # 이미지 출력
 ```
-![masked_img](https://github.com/Dongsun1234/BackgroundChromaKey/assets/1304199
-65/04b68214-403a-4903-9943-270b6b6b41c9)
+![masked_img](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/04b68214-403a-4903-9943-270b6b6b41c9)
 ![모자이크](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/9bc09ec7-af0b-4a49-b3bc-63dcfe3b3517)
 ![모자이크1](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/30318a60-d5f6-4a4c-a834-c4f0a175d528)
 
@@ -88,8 +87,8 @@ if key == 113:  # q 누르면 저장
 #키보드 입력 'q'를 누르면 해당 폴더에 이미지 저장
 ```
 
+# 조이스틱 파트
 ```python
-#조이스틱 파트
 import spidev
 
 spi = spidev.SpiDev()
