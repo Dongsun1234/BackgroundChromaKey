@@ -35,7 +35,6 @@ if key == 27:  # esc 누르면 종료
 ```
 
 
-![mask_brown](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/9012f511-6a27-48fd-85ed-177a104b52ab)
 ![mask_mor_inv](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/b9f11133-e2bb-46d2-95c9-b34200bc8f16)
 
 ### 모폴로지를 통해  커널 크기 만큼 1이 있지 않으면 0으로 처리하여 이미지 필터를 적용하였다.
@@ -87,7 +86,7 @@ if key == 113:  # q 누르면 저장
 #키보드 입력 'q'를 누르면 해당 폴더에 이미지 저장
 ```
 
-# 조이스틱 파트
+## 조이스틱 파트
 ```python
 import spidev
 
