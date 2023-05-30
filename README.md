@@ -12,10 +12,9 @@ key = cv.waitKey(25)
 
 ```
 
-![mask_brown.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b2624e5-eb86-415a-8896-e008c2ee5d0d/mask_brown.jpg)
+![mask_brown](https://github.com/Dongsun1234/BackgroundChromaKey/assets/130419965/11238559-f262-4884-8ccb-e542d7165fe7)
 
-                   mask_brown.jpg
-하지만 몸 영역 외의 다른 배경에서도 같이 검출이 되는 것을 볼 수 있었다. 그리고 머리카락 영역에서도 완전히 검출되지 않았다.
+# 하지만 몸 영역 외의 다른 배경에서도 같이 검출이 되는 것을 볼 수 있었다. 그리고 머리카락 영역에서도 완전히 검출되지 않았다.
 
 ```python
 brown_lo = np.array([39, 0, 50])  
